@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author evgeny
+ *
+ */
+module AlgorythmicTasks {
+}
