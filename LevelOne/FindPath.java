@@ -20,11 +20,11 @@ public class FindPath {
     // the problem is complexity: O(2^(n+m)) some visited values will be colulated several times
     // in order to optimize this silution we could stock all the values that has already been seen
     // in an array
-    
+
     public static int optimizedPaths(int x, int y) {
-        return helper(x, y, new int[x+1][y+1]);
+        return helper(x, y, new int[x + 1][y + 1]);
     }
-    
+
     public static int helper(int x, int y, int[][] arr) {
         // we create the recursion base here
         if (x < 1 || y < 1) {
