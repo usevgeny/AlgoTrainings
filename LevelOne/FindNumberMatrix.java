@@ -84,7 +84,7 @@ public class FindNumberMatrix {
                 int mid = left + (right - left) / 2;
                 if (raw[mid] == k) {
                     Long end = System.currentTimeMillis();
-                    System.out.println("Time to find cycle start node: " + (end - start) + "millis");
+                    System.out.println("Time to find  k using binary search: " + (end - start) + "millis");
                     return true;
                 }
                 if (raw[mid] < k) {
@@ -111,8 +111,8 @@ public class FindNumberMatrix {
         int n = matrix[0].length;
 
         int i = 0, j = n - 1;
-        // i we need to move vertically
         // j to move horizontally from the right (end of the array) to the left (beginning)
+        // i we need to move vertically
 
         while (i < m && j > 0) {
             if (matrix[i][j] == k) {
