@@ -17,8 +17,11 @@ public class StackProblem {
 
         System.out.println(Arrays.toString(countTemperatures(temperatures)));
         System.out.println(Arrays.toString(countTemperaturesStack(temperatures)));
+        System.out.println(Arrays.toString(firstSolutionBis(temperatures)));
+        System.out.println(Arrays.toString(stackSolutionBis(temperatures)));
 
     }
+
     // first solution a for cycle O(n²) the advantage is that we only create 2 vars i and j
     // if we need to considerate memory the complexity is O(n) | O(1)
 
@@ -57,6 +60,38 @@ public class StackProblem {
             stack.push(new C(t[i], i));
         }
         return answer;
+    }
+    
+    
+    public static int[] firstSolutionBis(int[] t) {
+        int[] result = new int[t.length];
+        result[t.length-1]=0;
+        
+        for(int i = 0; i<t.length;i++) {
+            for (int j=i+1;j<t.length;j++) {
+                if(t[j]>t[i]) {
+                    result[i]=j-i;
+                    break;
+                }
+            }
+        }
+        return result;
+    }
+    
+    public static int[] stackSolutionBis(int[] t) {
+        int[] result = new int[t.length];
+        Stack<C> stack = new Stack<>();
+        for(int i=t.length-1;i>=0;i--) {
+
+            while(!stack.isEmpty()&&stack.peek().value<t[i]) {
+                stack.pop();
+            }
+            if(!stack.isEmpty()) {
+            result[i]=stack.peek().index - i;
+            }
+            stack.push(new C(t[i], i));
+        }
+        return result;
     }
 
 }

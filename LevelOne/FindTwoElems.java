@@ -10,8 +10,8 @@ public class FindTwoElems {
     public static int[] hundredArray = new int[100];
     public static int[] thousandArray = new int[1000];
     public static int[] millionArray = new int[1_000_000];
-    public static int[] checkArray = new int[] { 0, 1, 3, 8, 12 };
-    public static int checkK = 9;
+    public static int[] checkArray = new int[] {3,2,4};
+    public static int checkK = 6;
 
     public static int[] fillArrayy(int[] arrayToFill, int maxRandomNumber) {
         Random ran = new Random();

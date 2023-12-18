@@ -19,6 +19,7 @@ public class ScientificArticles {
         System.out.println(sortedSolution(articlesCitations));
         Arrays.sort(articlesCitations);
         System.out.println(calculateHIndex(articlesCitations));
+        System.out.println(hindexCountedSorting(articlesCitations));
 
     }
 
@@ -78,6 +79,7 @@ public class ScientificArticles {
                                    // that citation value.in this case citation represents an index in counter array
             }
         }
+        System.out.println(Arrays.toString(count));
 
         ////// THE SECOND STEP //////
 
@@ -93,6 +95,7 @@ public class ScientificArticles {
                 pos++;
             }
         }
+        System.out.println(Arrays.toString(citations));
 
         ////// THE THIRD STEP //////
 
