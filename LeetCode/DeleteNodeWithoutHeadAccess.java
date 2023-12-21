@@ -49,4 +49,10 @@ public class DeleteNodeWithoutHeadAccess {
             return joiner.toString();
         }
     }
+    
+    
+    public static void deleteNodeBis(ListNode node) {
+        node.val = node.next.val;
+        node.next = node.next.next;
+    }
 }
